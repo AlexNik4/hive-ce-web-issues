@@ -54,25 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             FilledButton(
               onPressed: () {
-                MyStorage.instance.updateSoundMetadata(
-                  HiveModel(id: 1, name: 'Test'),
-                );
+                MyStorage.instance.putData(HiveModel(id: 1, name: 'Test Data'));
               },
-              child: const Text('Add/Update Metadata'),
+              child: const Text('Add/Update'),
             ),
             FilledButton(
               onPressed: () async {
-                List<HiveModel> loaded =
-                    await MyStorage.instance.getAllSounds();
+                List<HiveModel> loaded = await MyStorage.instance.getAllData();
                 if (loaded.isEmpty) {
-                  print('No sounds found');
+                  print('No data found');
                 } else {
                   for (var sound in loaded) {
-                    print('Sound: ${sound.name}');
+                    print('Data: ${sound.name}');
                   }
                 }
               },
-              child: const Text('Load All Metadata'),
+              child: const Text('Load All'),
             ),
           ],
         ),

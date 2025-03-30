@@ -17,24 +17,24 @@ class MyStorage {
   }
 
   /// Update/Create an entry in the sounds metadata box.
-  Future<void> updateSoundMetadata(HiveModel metadata) {
-    return _simpleBox.put(metadata.id.toString(), metadata);
+  Future<void> putData(HiveModel model) {
+    return _simpleBox.put(model.id.toString(), model);
   }
 
   /// Get all the sounds metadata.
-  Future<List<HiveModel>> getAllSounds() async {
-    final sounds = <HiveModel>[];
+  Future<List<HiveModel>> getAllData() async {
+    final data = <HiveModel>[];
     try {
       final keys = await _simpleBox.getAllKeys();
       for (String key in keys) {
         final sound = await _simpleBox.get(key);
         if (sound != null) {
-          sounds.add(sound);
+          data.add(sound);
         }
       }
     } catch (e) {
-      print('Error getting all sounds: $e');
+      print('Error getting all data: $e');
     }
-    return sounds;
+    return data;
   }
 }
