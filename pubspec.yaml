@@ -1,0 +1,29 @@
+name: hive_ce_web_issue
+description: "A new Flutter project."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  hive_ce: ^2.10.1
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  build_runner: ^2.4.15
+  hive_ce_generator: ^1.8.2
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
