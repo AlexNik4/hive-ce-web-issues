@@ -13,7 +13,10 @@ class MyStorage {
       _myBoxName,
     });
 
-    _simpleBox = await collection.openBox<HiveModel>(_myBoxName);
+    _simpleBox = await collection.openBox<HiveModel>(
+      _myBoxName,
+      fromJson: HiveModel.fromJson,
+    );
   }
 
   /// Update/Create an entry in the sounds metadata box.
