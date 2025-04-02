@@ -10,17 +10,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  hive_ce:
+    path: ../hive_ce/hive
 
-  hive_ce: ^2.10.1
+  # hive_ce: ^2.10.1
 
   cupertino_icons: ^1.0.8
+  #json_annotation: ^4.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  # hive_ce_generator:
+  #   path: ../hive_ce/hive_generator
 
   build_runner: ^2.4.15
-  hive_ce_generator: ^1.8.2
+  #json_serializable: ^6.9.4
+  #hive_ce_generator: ^1.8.2
 
   flutter_lints: ^5.0.0
 
